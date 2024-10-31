@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Deja Brew</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="pastas.css"> 
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/NAPAY/homepage/index.html" class="navbar-brand">Deja Brew</a>
+        <ul class="navbar-nav">
+            <li><a href="/NAPAY/homepage/index.html">Home</a></li>
+            <li><a href="/NAPAY/about/about.html">About Us</a></li>
+            <li><a href="/NAPAY/contact/contactus.html">Contact Us</a></li>
+            <li><a href="/NAPAY/order/order.html">Coffee</a></li>
+            <li><a href="/NAPAY/order/ricemeals/ricemeal.html">Rice Meals</a></li>
+            <li><a href="/NAPAY/order/pastas/pastas.html">Pastas</a></li>
+            <li><a href="/NAPAY/order/drinks/drinks.html">Drinks</a></li>
+            <li><a href="/NAPAY/order/pastries/pastries.html">Pastries & Baked Goods</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="menu-section">
+            <h1 class="menu-title">Our Menu</h1>
+            <div class="menu-category" id="pastas">
+                <h2>Pastas</h2>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/spaghetti.jpg" alt="Spag">
+                        <h3 class="menu-item-name">Spaghetti</h3>
+                        <p class="menu-item-price">₱55.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Spaghetti', 55.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/creamy chicken.jpg" alt="CarbChicken">
+                        <h3 class="menu-item-name">Creamy Chicken Carbonara</h3>
+                        <p class="menu-item-price">₱78.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Creamy Chicken Carbonara', 78.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/shrimp alfredo.jpg" alt="Alfredo">
+                        <h3 class="menu-item-name">Shrimp Alfredo</h3>
+                        <p class="menu-item-price">₱76.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Shrimp Alfredo', 76.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/creamy mushroom.jpg" alt="CarbMushroom">
+                        <h3 class="menu-item-name">Creamy Mushroom Carbonara</h3>
+                        <p class="menu-item-price">₱78.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Creamy Mushroom Carbonara', 78.00)">Add to Order</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="order-summary">
+            <h2>Your Order</h2>
+            <div id="order-list" class="order-list"></div>
+            <div class="total-order">
+                <p id="total-price">Total: ₱0.00</p>
+                <a href="/NAPAY/order/confirm order/confirm.html" class="confirm-order-btn" onclick="confirmOrder()">Confirm Order</a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        let order = [];
+        let total = 0;
+    
+    function addToOrder(itemName, itemPrice) {
+        const existingOrderIndex = order.findIndex(item => item.name === itemName);
+        if (existingOrderIndex > -1) {
+            order[existingOrderIndex].quantity += 1;
+            order[existingOrderIndex].totalPrice += itemPrice; 
+        } else {
+            order.push({ name: itemName, price: itemPrice, quantity: 1, totalPrice: itemPrice });
+        }
+        total += itemPrice; 
+        updateOrderSummary();
+        saveOrderToLocalStorage();
+    }
+    
+    function removeFromOrder(index) {
+        const item = order[index];
+        
+        total -= item.price; 
+    
+        if (item.quantity > 1) {
+            item.quantity -= 1;
+            item.totalPrice -= item.price; 
+        } else {
+            order.splice(index, 1);
+        }
+        updateOrderSummary();
+        saveOrderToLocalStorage();
+    }
+    
+    function updateOrderSummary() {
+        const orderList = document.getElementById('order-list');
+        const totalPrice = document.getElementById('total-price');
+    
+        orderList.innerHTML = '';
+    
+        order.forEach((item, index) => {
+            const listItem = document.createElement('div');
+            listItem.className = 'order-item';
+            listItem.innerHTML = `
+                ${item.name} (x${item.quantity}) <span class="order-item-price">₱${item.totalPrice.toFixed(2)}</span>
+                <button class="remove-order-btn" onclick="removeFromOrder(${index})">Remove</button>
+            `;
+            orderList.appendChild(listItem);
+        });
+    
+        totalPrice.textContent = `Total: ₱${total.toFixed(2)}`;
+    }
+    
+    function saveOrderToLocalStorage() {
+        localStorage.setItem('orders', JSON.stringify(order));
+        localStorage.setItem('total', total.toFixed(2));
+    }
+    
+    function loadOrderFromLocalStorage() {
+        const ordersFromStorage = localStorage.getItem('orders');
+        if (ordersFromStorage) {
+            order = JSON.parse(ordersFromStorage);
+            total = parseFloat(localStorage.getItem('total') || '0');
+            total = order.reduce((acc, item) => acc + item.totalPrice, 0);
+            
+            updateOrderSummary(); 
+        }
+    }
+    
+    function confirmOrder() {
+        localStorage.setItem('orders', JSON.stringify(order));
+        window.location.href = 'deliver.html';
+    }
+    
+    window.onload = loadOrderFromLocalStorage;
+        </script>
+    </body>
+</html>

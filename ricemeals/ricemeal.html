@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Deja Brew</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="ricemeal.css"> 
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/NAPAY/homepage/index.html" class="navbar-brand">Deja Brew</a>
+        <ul class="navbar-nav">  
+            <li><a href="/NAPAY/homepage/index.html">Home</a></li>
+            <li><a href="/NAPAY/about/about.html">About Us</a></li>
+            <li><a href="/NAPAY/contact/contactus.html"></a>Contact Us</a></li>
+            <li><a href="/NAPAY/order/order.html">Coffee</a></li>
+            <li><a href="/NAPAY/order/ricemeals/ricemeal.html">Rice Meals</a></li>
+            <li><a href="/NAPAY/order/drinks/drinks.html">Pastas</a></li>
+            <li><a href="/NAPAY/order/drinks/drinks.html">Drinks</a></li>
+            <li><a href="/NAPAY/order/pastries/pastries.html">Pastries & Baked Goods</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="menu-section">
+            <h1 class="menu-title">Our Menu</h1>
+            <div class="menu-category" id="Rice Meals">
+                <h2>Rice Meals</h2>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/katsu.webp" alt="Katsu">
+                        <h3 class="menu-item-name">Chicken Katsu</h3>
+                        <p class="menu-item-price">₱143.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Chicken Katsu', 143.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/meals.jpg" alt="Chicken Wings">
+                        <h3 class="menu-item-name">Chicken Wings</h3>
+                        <p class="menu-item-price">₱199.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Chicken Wings', 199.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/chicken balls.jpg" alt="Chicken Pops">
+                        <h3 class="menu-item-name">Chicken Pops</h3>
+                        <p class="menu-item-price">₱121.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Chicken Pops', 121.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/shanghai.jpg" alt="Shanghai">
+                        <h3 class="menu-item-name">Lumsilog</h3>
+                        <p class="menu-item-price">₱125.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Shanghai', 125.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/topsilog.jpg" alt="Topsilog">
+                        <h3 class="menu-item-name">Topsilog</h3>
+                        <p class="menu-item-price">₱121.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Topsilog', 121.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/porksilog.jpg" alt="Pork Silog">
+                        <h3 class="menu-item-name">Pork Silog</h3>
+                        <p class="menu-item-price">₱144.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Pork Silog', 144.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/hotsilog.jpg"  alt="Hot Silog">
+                        <h3 class="menu-item-name">Hotsilog</h3>
+                        <p class="menu-item-price">₱144.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Hotsilog', 144.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/sesame chicken.jpg" alt="Sesame Chicken">
+                        <h3 class="menu-item-name">Sesame Chicken</h3>
+                        <p class="menu-item-price">₱135.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Pork Silog', 135.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/parmesan.jpg" alt="Parmesan Chicke">
+                        <h3 class="menu-item-name">Parmesan Chicken</h3>
+                        <p class="menu-item-price">₱232.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Parmesan Chicken', 232.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/lumpia.jpg" alt="Lumpia">
+                        <h3 class="menu-item-name">Lumpia</h3>
+                        <p class="menu-item-price">₱214.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Lumpia', 214.00)">Add to Order</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="menu-category" id="Other Meals">
+                <h2>Other Meals</h2>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/lomi.jpg" alt="Lomi">
+                        <h3 class="menu-item-name">Lomi</h3>
+                        <p class="menu-item-price">₱76.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Lomi', 73.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/PANSILOG.jpg" alt="pansilog">
+                        <h3 class="menu-item-name">Pansilog</h3>
+                        <p class="menu-item-price">₱65.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Pansilog', 65.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/pancit.jpg" alt="Pancit">
+                        <h3 class="menu-item-name">Pancit</h3>
+                        <p class="menu-item-price">₱78.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Pancit', 78.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/bihon.jpg" alt="Bihon">
+                        <h3 class="menu-item-name">Pancit Bihon</h3>
+                        <p class="menu-item-price">₱67.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Bihon', 67.00)">Add to Order</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-category" id="Snacks">
+                <h2>Snacks</h2>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/Burger n fries.jpg" alt="Burger">
+                        <h3 class="menu-item-name">Burger with Fries</h3>
+                        <p class="menu-item-price">₱126.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Burger With Fries', 126.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/sandwich.jpg" alt="sandwich">
+                        <h3 class="menu-item-name">Sandwich</h3>
+                        <p class="menu-item-price">₱43.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Sandwich', 43.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/pretzels.jpeg" alt="Pretzels">
+                        <h3 class="menu-item-name">Pretzels</h3>
+                        <p class="menu-item-price">₱56.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Pretzels', 56.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/fries.webp" alt="Fries">
+                        <h3 class="menu-item-name">French Fries</h3>
+                        <p class="menu-item-price">₱45.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('French Fries', 45.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/nachos.jpg" alt="Nachos">
+                        <h3 class="menu-item-name">Nachos</h3>
+                        <p class="menu-item-price">₱54.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Nachos', 54.00)">Add to Order</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="order-summary">
+            <h2>Your Order</h2>
+            <div id="order-list" class="order-list"></div>
+            <div class="total-order">
+                <p id="total-price">Total: ₱0.00</p>
+                <a href="/NAPAY/order/confirm order/confirm.html" class="confirm-order-btn" onclick="confirmOrder()">Confirm Order</a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        let order = [];
+        let total = 0;
+    
+    function addToOrder(itemName, itemPrice) {
+        const existingOrderIndex = order.findIndex(item => item.name === itemName);
+        if (existingOrderIndex > -1) {
+            order[existingOrderIndex].quantity += 1;
+            order[existingOrderIndex].totalPrice += itemPrice; 
+        } else {
+            order.push({ name: itemName, price: itemPrice, quantity: 1, totalPrice: itemPrice });
+        }
+        total += itemPrice; 
+        updateOrderSummary();
+        saveOrderToLocalStorage();
+    }
+    
+    function removeFromOrder(index) {
+        const item = order[index];
+        
+        total -= item.price; 
+    
+        if (item.quantity > 1) {
+            item.quantity -= 1;
+            item.totalPrice -= item.price; 
+        } else {
+            order.splice(index, 1);
+        }
+        updateOrderSummary();
+        saveOrderToLocalStorage();
+    }
+    
+    function updateOrderSummary() {
+        const orderList = document.getElementById('order-list');
+        const totalPrice = document.getElementById('total-price');
+    
+        orderList.innerHTML = '';
+    
+        order.forEach((item, index) => {
+            const listItem = document.createElement('div');
+            listItem.className = 'order-item';
+            listItem.innerHTML = `
+                ${item.name} (x${item.quantity}) <span class="order-item-price">₱${item.totalPrice.toFixed(2)}</span>
+                <button class="remove-order-btn" onclick="removeFromOrder(${index})">Remove</button>
+            `;
+            orderList.appendChild(listItem);
+        });
+    
+        totalPrice.textContent = `Total: ₱${total.toFixed(2)}`;
+    }
+    
+    function saveOrderToLocalStorage() {
+        localStorage.setItem('orders', JSON.stringify(order));
+        localStorage.setItem('total', total.toFixed(2));
+    }
+    
+    function loadOrderFromLocalStorage() {
+        const ordersFromStorage = localStorage.getItem('orders');
+        if (ordersFromStorage) {
+            order = JSON.parse(ordersFromStorage);
+            total = parseFloat(localStorage.getItem('total') || '0');
+            total = order.reduce((acc, item) => acc + item.totalPrice, 0);
+            
+            updateOrderSummary(); 
+        }
+    }
+    
+    function confirmOrder() {
+        localStorage.setItem('orders', JSON.stringify(order));
+        window.location.href = 'deliver.html';
+    }
+    
+    window.onload = loadOrderFromLocalStorage;
+    </script>
+    </body>
+</html>

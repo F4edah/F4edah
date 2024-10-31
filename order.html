@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Deja Brew</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="order.css"> 
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/NAPAY/homepage/index.html" class="navbar-brand">Deja Brew</a>
+        <ul class="navbar-nav">
+            <li><a href="/NAPAY/homepage/index.html">Home</a></li>
+            <li><a href="/NAPAY/about/about.html">About Us</a></li>
+            <li><a href="/NAPAY/contact/contactus.html">Contact Us</a></li>
+            <li><a href="/NAPAY/order/order.html">Coffee</a></li>
+            <li><a href="/NAPAY/order/ricemeals/ricemeal.html">Rice Meals</a></li>
+            <li><a href="/NAPAY/order/pastas/pastas.html">Pastas</a></li>
+            <li><a href="/NAPAY/order/drinks/drinks.html">Drinks</a></li>
+            <li><a href="/NAPAY/order/pastries/pastries.html">Pastries & Baked Goods</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="menu-section">
+            <h1 class="menu-title">Our Menu</h1>
+            <div class="menu-category" id="coffee">
+                <h2>Coffee</h2>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/blkamrc.webp" alt="Americano">
+                        <h3 class="menu-item-name">Americano</h3>
+                        <p class="menu-item-price">₱50.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Americano', 50.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/latte.webp" alt="Latte">
+                        <h3 class="menu-item-name">Latte</h3>
+                        <p class="menu-item-price">₱56.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Latte', 56.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/black coffee.jpeg" alt="Black Coffee">
+                        <h3 class="menu-item-name">Black Coffee</h3>
+                        <p class="menu-item-price">₱53.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Black Coffee', 53.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/kofe.jpg" alt="Cappuccino">
+                        <h3 class="menu-item-name">Cappuccino</h3>
+                        <p class="menu-item-price">₱64.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Cappuccino', 64.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/crmlmhciat.webp" alt="Macchiato">
+                        <h3 class="menu-item-name">Caramel Macchiato (Iced)</h3>
+                        <p class="menu-item-price">₱69.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Caramel Macchiato (Iced)', 69.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/icdcof.jpg" alt="Iced Coffee">
+                        <h3 class="menu-item-name">Iced Coffee</h3>
+                        <p class="menu-item-price">₱45.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Iced Coffee', 45.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/iced matcha.webp" alt="Matcha Latte (Iced)">
+                        <h3 class="menu-item-name">Matcha Latte (Iced)</h3>
+                        <p class="menu-item-price">₱53.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Matcha Latte (Iced)', 53.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/strwnlatte.jpg" alt="Strawberry Latte (Iced)">
+                        <h3 class="menu-item-name">Strawberry Latte (Iced)</h3>
+                        <p class="menu-item-price">₱53.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Strawberry Latte (Iced)', 53.00)">Add to Order</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-category" id="non-coffee">
+                <h2>Non-Coffee Alternatives</h2>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/tea.jpeg" alt="Tea">
+                        <h3 class="menu-item-name">Tea</h3>
+                        <p class="menu-item-price">₱30.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Tea', 30.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/hot choco.jpg" alt="Hot Chocolate">
+                        <h3 class="menu-item-name">Hot Chocolate</h3>
+                        <p class="menu-item-price">₱50.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Hot Chocolate', 50.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/frappes.jpg" alt="Strawberry">
+                        <h3 class="menu-item-name">Strawberry Frappe</h3>
+                        <p class="menu-item-price">₱58.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Strawberry Frappe', 58.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/biscoff.jpeg" alt="Biscoff">
+                        <h3 class="menu-item-name">Biscoff Frappe</h3>
+                        <p class="menu-item-price">₱58.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Biscoff Frappe', 58.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/matcha2.webp" alt="Matcha">
+                        <h3 class="menu-item-name">Matcha Frappe</h3>
+                        <p class="menu-item-price">₱58.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Matcha Frappe', 58.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/oreo.jpeg" alt="Oreo Frappe">
+                        <h3 class="menu-item-name">Oreo Frappe</h3>
+                        <p class="menu-item-price">₱58.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Oreo Frappe', 58.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/choco.webp" alt="Chocolate Frappe">
+                        <h3 class="menu-item-name">Chocolate Frappe</h3>
+                        <p class="menu-item-price">₱65.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Chocolate Frappe', 65.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/nutella.jpeg" alt="Nutella Frappe">
+                        <h3 class="menu-item-name">Nutella Frappe</h3>
+                        <p class="menu-item-price">₱65.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Nutella Frappe', 65.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/caramel.webp" alt="Caramel Frappe">
+                        <h3 class="menu-item-name">Caramel Frappe</h3>
+                        <p class="menu-item-price">₱65.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Caramel Frappe', 65.00)">Add to Order</button>
+                    </div>    
+                </div>
+            </div>       
+        </section>
+
+        <section class="order-summary">
+            <h2>Your Order</h2>
+            <div id="order-list" class="order-list"></div>
+            <div class="total-order">
+                <p id="total-price">Total: ₱0.00</p>
+                <a href="/NAPAY/order/confirm order/confirm.html" class="confirm-order-btn" onclick="confirmOrder()">Confirm Order</a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        let order = [];
+        let total = 0;
+    
+    function addToOrder(itemName, itemPrice) {
+        const existingOrderIndex = order.findIndex(item => item.name === itemName);
+        if (existingOrderIndex > -1) {
+            order[existingOrderIndex].quantity += 1;
+            order[existingOrderIndex].totalPrice += itemPrice; 
+        } else {
+            order.push({ name: itemName, price: itemPrice, quantity: 1, totalPrice: itemPrice });
+        }
+        total += itemPrice; 
+        updateOrderSummary();
+        saveOrderToLocalStorage();
+    }
+    
+    function removeFromOrder(index) {
+        const item = order[index];
+        
+        total -= item.price; 
+    
+        if (item.quantity > 1) {
+            item.quantity -= 1;
+            item.totalPrice -= item.price; 
+        } else {
+            order.splice(index, 1);
+        }
+        updateOrderSummary();
+        saveOrderToLocalStorage();
+    }
+    
+    function updateOrderSummary() {
+        const orderList = document.getElementById('order-list');
+        const totalPrice = document.getElementById('total-price');
+    
+        orderList.innerHTML = '';
+    
+        order.forEach((item, index) => {
+            const listItem = document.createElement('div');
+            listItem.className = 'order-item';
+            listItem.innerHTML = `
+                ${item.name} (x${item.quantity}) <span class="order-item-price">₱${item.totalPrice.toFixed(2)}</span>
+                <button class="remove-order-btn" onclick="removeFromOrder(${index})">Remove</button>
+            `;
+            orderList.appendChild(listItem);
+        });
+    
+        totalPrice.textContent = `Total: ₱${total.toFixed(2)}`;
+    }
+    
+    function saveOrderToLocalStorage() {
+        localStorage.setItem('orders', JSON.stringify(order));
+        localStorage.setItem('total', total.toFixed(2));
+    }
+    
+    function loadOrderFromLocalStorage() {
+        const ordersFromStorage = localStorage.getItem('orders');
+        if (ordersFromStorage) {
+            order = JSON.parse(ordersFromStorage);
+            total = parseFloat(localStorage.getItem('total') || '0');
+            total = order.reduce((acc, item) => acc + item.totalPrice, 0);
+            
+            updateOrderSummary(); 
+        }
+    }
+    
+    function confirmOrder() {
+        localStorage.setItem('orders', JSON.stringify(order));
+        window.location.href = 'deliver.html';
+    }
+    
+    window.onload = loadOrderFromLocalStorage;
+        </script>
+</body>
+</html>

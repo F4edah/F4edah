@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You for Your Order!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="total.css">
+</head>
+<body>
+    <h1>Thank You for Your Order!</h1>
+    <p>Your order shall arrive shortly.</p>
+    <div class="order-details" id="order-details"></div>
+    <a href="/NAPAY/order/order.html" class="back-btn">Back to Menu</a>
+
+    <script>
+        const orders = JSON.parse(localStorage.getItem('orders')) || [];
+        const orderDetails = document.getElementById('order-details');
+
+        if (orders.length > 0) {
+            const orderSummary = {};
+
+            // Aggregate orders by name
+            orders.forEach(order => {
+                if (orderSummary[order.name]) {
+                    orderSummary[order.name].quantity += order.quantity; 
+                    orderSummary[order.name].totalPrice += order.totalPrice; 
+                } else {
+                    orderSummary[order.name] = {
+                        quantity: order.quantity,
+                        totalPrice: order.totalPrice
+                    };
+                }
+            });
+
+            const orderList = document.createElement('ul');
+            for (const [name, { quantity, totalPrice }] of Object.entries(orderSummary)) {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${name} (x${quantity}) - ₱${totalPrice.toFixed(2)}`;
+                orderList.appendChild(listItem);
+            }
+            orderDetails.appendChild(orderList);
+        } else {
+            orderDetails.innerHTML = '<p>No orders found.</p>';
+        }
+    </script>
+</body>
+</html>

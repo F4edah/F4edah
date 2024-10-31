@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Deja Brew</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="drinks.css"> 
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/NAPAY/homepage/index.html" class="navbar-brand">Deja Brew</a>
+        <ul class="navbar-nav">
+            <li><a href="/NAPAY/homepage/index.html">Home</a></li>
+            <li><a href="/NAPAY/about/about.html">About Us</a></li>
+            <li><a href="/NAPAY/contact/contactus.html">Contact Us</a></li>
+            <li><a href="/NAPAY/order/order.html">Coffee</a></li>
+            <li><a href="/NAPAY/order/ricemeals/ricemeal.html">Rice Meals</a></li>
+            <li><a href="/NAPAY/order/pastas/pastas.html">Pastas</a></li>
+            <li><a href="/NAPAY/order/drinks/drinks.html">Drinks</a></li>
+            <li><a href="/NAPAY/order/pastries/pastries.html">Pastries & Baked Goods</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="menu-section">
+            <h1 class="menu-title">Our Menu</h1>
+            <div class="menu-category" id="coffee">
+                <h2>Drinks</h2>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/iced tea.webp" alt="Iced Tea">
+                        <h3 class="menu-item-name">Iced Tea</h3>
+                        <p class="menu-item-price">₱28.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Iced Tea', 28.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/blueberrylemonade.jpg" alt="Blueberry">
+                        <h3 class="menu-item-name">Blueberry Lemonade</h3>
+                        <p class="menu-item-price">₱54.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Blueberry Lemonade', 54.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/strawberrylemondae.jpg" alt="Strawberry">
+                        <h3 class="menu-item-name">Strawberry Lemonade</h3>
+                        <p class="menu-item-price">₱54.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Strawberry Lemonade', 54.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/Mountain Dew Lemonade.jpg" alt="Mtn Dew">
+                        <h3 class="menu-item-name">Mountain Dew Lemonade</h3>
+                        <p class="menu-item-price">₱48.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Mountain Dew Lemonade', 54.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/cucumber.webp" alt="Cucumber">
+                        <h3 class="menu-item-name">Cucumber Lemonade</h3>
+                        <p class="menu-item-price">₱43.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Cucumber Lemonade', 43.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/lavenderlemonade.jpeg" alt="Lavender Lemonade">
+                        <h3 class="menu-item-name">Lavender Lemonade</h3>
+                        <p class="menu-item-price">₱60.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Lavender Lemonade', 60.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/mintlemonade.webp" alt="Mint Lemonade">
+                        <h3 class="menu-item-name">Mint Lemonade</h3>
+                        <p class="menu-item-price">₱55.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Mint Lemonade', 55.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/gingerlemonade.webp" alt="Ginger Lemonade">
+                        <h3 class="menu-item-name">Ginger Lemonade</h3>
+                        <p class="menu-item-price">₱58.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Ginger Lemonade', 58.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/pineapple lemonade.webp" alt="Pineapple Lemonade">
+                        <h3 class="menu-item-name">Pineapple Lemonade</h3>
+                        <p class="menu-item-price">₱62.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Pineapple Lemonade', 62.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/watermelon lemonade.avif" alt="Watermelon Lemonade">
+                        <h3 class="menu-item-name">Watermelon Lemonade</h3>
+                        <p class="menu-item-price">₱57.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Watermelon Lemonade', 57.00)">Add to Order</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-category" id="non-coffee">
+                <h2>Milktea</h2>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/classic milktea.jpg" alt="Classic Milk Tea">
+                        <h3 class="menu-item-name">Classic Milk Tea</h3>
+                        <p class="menu-item-price">₱50.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Classic Milk Tea', 50.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/dark choco.jpg" alt="Dark Chocolate">
+                        <h3 class="menu-item-name">Dark Chocolate Milk Tea</h3>
+                        <p class="menu-item-price">₱55.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Dark Chocolate Milk Tea', 55.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/Matcha Latte.jpg" alt="Matcha Milk Tea">
+                        <h3 class="menu-item-name">Matcha Milk Tea</h3>
+                        <p class="menu-item-price">₱45.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Fruit Milk Tea', 45.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/taro.jpg" alt="Taro Milk Tea">
+                        <h3 class="menu-item-name">Taro Milk Tea</h3>
+                        <p class="menu-item-price">₱55.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Taro Milk Tea', 55.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/red velvet.jpg" alt="Red Velvet">
+                        <h3 class="menu-item-name">Red Velvet Milk Tea</h3>
+                        <p class="menu-item-price">₱57.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Red Velvet Milk Tea', 57.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/coffee milktea.jpg" alt="CoffeeMilk Tea">
+                        <h3 class="menu-item-name">Coffee Milk Tea</h3>
+                        <p class="menu-item-price">₱45.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Coffee Milk Tea', 45.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/pandanmilktea.jpg" alt="Pandan Milk Tea">
+                        <h3 class="menu-item-name">Pandan Milk Tea</h3>
+                        <p class="menu-item-price">₱58.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Pandan Milk Tea', 58.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/black forest.jpg" alt="Black Forest Milk Tea">
+                        <h3 class="menu-item-name">Black Forest Milk Tea</h3>
+                        <p class="menu-item-price">₱52.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Black Forest Milk Tea', 52.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/creamcheese.jpg" alt="Cream Cheese Milk Tea">
+                        <h3 class="menu-item-name">Creamcheese Milk Tea</h3>
+                        <p class="menu-item-price">₱53.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Almond Milk Tea', 53.00)">Add to Order</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/NAPAY/images/brownsugar.jpg" alt="Brownsugar Milk Tea">
+                        <h3 class="menu-item-name">Brownsugar Milk Tea</h3>
+                        <p class="menu-item-price">₱46.00</p>
+                        <button class="add-to-order-btn" onclick="addToOrder('Peach Milk Tea', 46.00)">Add to Order</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="order-summary">
+            <h2>Your Order</h2>
+            <div id="order-list" class="order-list"></div>
+            <div class="total-order">
+                <p id="total-price">Total: ₱0.00</p>
+                <a href="/NAPAY/order/confirm order/confirm.html" class="confirm-order-btn" onclick="confirmOrder()">Confirm Order</a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        let order = [];
+        let total = 0;
+    
+    function addToOrder(itemName, itemPrice) {
+        const existingOrderIndex = order.findIndex(item => item.name === itemName);
+        if (existingOrderIndex > -1) {
+            order[existingOrderIndex].quantity += 1;
+            order[existingOrderIndex].totalPrice += itemPrice; 
+        } else {
+            order.push({ name: itemName, price: itemPrice, quantity: 1, totalPrice: itemPrice });
+        }
+        total += itemPrice; 
+        updateOrderSummary();
+        saveOrderToLocalStorage();
+    }
+    
+    function removeFromOrder(index) {
+        const item = order[index];
+        
+        total -= item.price; 
+    
+        if (item.quantity > 1) {
+            item.quantity -= 1;
+            item.totalPrice -= item.price; 
+        } else {
+            order.splice(index, 1);
+        }
+        updateOrderSummary();
+        saveOrderToLocalStorage();
+    }
+    
+    function updateOrderSummary() {
+        const orderList = document.getElementById('order-list');
+        const totalPrice = document.getElementById('total-price');
+    
+        orderList.innerHTML = '';
+    
+        order.forEach((item, index) => {
+            const listItem = document.createElement('div');
+            listItem.className = 'order-item';
+            listItem.innerHTML = `
+                ${item.name} (x${item.quantity}) <span class="order-item-price">₱${item.totalPrice.toFixed(2)}</span>
+                <button class="remove-order-btn" onclick="removeFromOrder(${index})">Remove</button>
+            `;
+            orderList.appendChild(listItem);
+        });
+    
+        totalPrice.textContent = `Total: ₱${total.toFixed(2)}`;
+    }
+    
+    function saveOrderToLocalStorage() {
+        localStorage.setItem('orders', JSON.stringify(order));
+        localStorage.setItem('total', total.toFixed(2));
+    }
+    
+    function loadOrderFromLocalStorage() {
+        const ordersFromStorage = localStorage.getItem('orders');
+        if (ordersFromStorage) {
+            order = JSON.parse(ordersFromStorage);
+            total = parseFloat(localStorage.getItem('total') || '0');
+            total = order.reduce((acc, item) => acc + item.totalPrice, 0);
+            
+            updateOrderSummary(); 
+        }
+    }
+    
+    function confirmOrder() {
+        localStorage.setItem('orders', JSON.stringify(order));
+        window.location.href = 'deliver.html';
+    }
+    
+    window.onload = loadOrderFromLocalStorage;
+        </script>
+</body>
+</html>
